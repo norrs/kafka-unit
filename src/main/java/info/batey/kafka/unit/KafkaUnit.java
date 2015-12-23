@@ -63,11 +63,8 @@ public class KafkaUnit {
     }
 
     public KafkaUnit(String zkConnectionString, String kafkaConnectionString) {
-        int zkPort = parseConnectionString(zkConnectionString);
-        int brokerPort = parseConnectionString(kafkaConnectionString);
-
-        this.zkPort = zkPort;
-        this.brokerPort = brokerPort;
+        this.zkPort = parseConnectionString(zkConnectionString);;
+        this.brokerPort = parseConnectionString(kafkaConnectionString);
         this.zookeeperString = "localhost:" + zkPort;
         this.brokerString = "localhost:" + brokerPort;
     }
