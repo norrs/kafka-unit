@@ -26,8 +26,7 @@ kafkaUnitServer.startup();
 kafkaUnitServer.shutdown();
 ```
 
-The alternative constructor allows providing connection strings rather than ports, which might be convenient if you
-want to use existing config without parsing it to extract port numbers:
+The alternative constructor allows providing connection strings rather than ports, which might be convenient if you want to use existing config without parsing it to extract port numbers:
 
 ```java
 KafkaUnit kafkaUnitServer = new KafkaUnit("localhost:5000", "localhost:5001");
